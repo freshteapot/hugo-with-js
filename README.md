@@ -44,7 +44,7 @@ Run public directory with nginx via docker
 ```
 docker run --name lal-sample \
 -p 8080:80 \
--v /Users/tinkerbell/git/hugo-with-js/hugo/public:/usr/share/nginx/html:ro \
+-v $PWD/hugo/public:/usr/share/nginx/html:ro \
 -P -d nginx:1.17-alpine
 ```
 
