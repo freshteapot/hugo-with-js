@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset='utf-8'>
+    <meta name='viewport' content='width=device-width,initial-scale=1'>
+    {{ $manifest := .Site.Data.manifest }}
+    {{ $jsKey := .Params.js }}
+    {{ $jsInclude := index $manifest $jsKey}}
+</head>
+
+<body>
+    {{ $manifest := .Site.Data.manifest }}
+    {{ $jsKey := .Params.js }}
+    {{ $jsInclude := index $manifest $jsKey}}
+    <pre style="white-space: pre-line;">
+        {{ $manifest }}
+        {{ $jsInclude }}
+        {{ $jsKey }}
+        {{ .Params.js }}
+    </pre>
+
+</body>
+
+</html>

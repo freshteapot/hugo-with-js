@@ -1,0 +1,28 @@
+{
+    "name": "rollup-tutorial",
+    "version": "1.0.0",
+    "scripts": {
+        "dev:hugo": "cd ../hugo && hugo server --disableFastRender",
+        "dev:js:list_editor": "cd list_editor && rollup -c -w",
+        "dev:js:login_header": "cd login_header && rollup -c -w",
+        "dev:js:wordcount": "cd wordcount && rollup -c -w",
+        "dev-all": "concurrently \"npm run dev:hugo\" \"npm run dev:js:list_editor\" \"npm run dev:js:login_header\"",
+        "dev": "concurrently \"npm run dev:hugo\" \"npm run dev:js:list_editor\"",
+        "build:js:list_editor": "cd list_editor && rollup -c",
+        "build:js:login_header": "cd login_header && rollup -c",
+        "build:js:wordcount": "cd wordcount && rollup -c",
+        "build:js": "npm run build:js:login_header && npm run build:js:list_editor && npm run build:js:wordcount",
+        "build:hugo": "cd ../hugo && hugo",
+        "build": "rm -rf ../hugo/public && npm run build:js && npm run build:hugo"
+    },
+    "devDependencies": {
+        "@rollup/plugin-alias": "^3.0.1",
+        "@rollup/plugin-json": "^4.0.2",
+        "concurrently": "^5.1.0",
+        "rollup": "^1.32.0",
+        "rollup-plugin-delete": "^1.2.0",
+        "rollup-plugin-output-manifest": "^1.0.2",
+        "rollup-plugin-terser": "^5.2.0"
+    },
+    "dependencies": {}
+}
