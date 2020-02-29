@@ -3,6 +3,11 @@
 - Save them for use in hugo
 - Specify specific layout in hugo to be fully spa (localhost:8080/posts/editor.html)
 
+# Requirements
+- hugo (via brew or gohugo.io)
+- node
+- npm
+
 # Try it
 
 - Install and run dev environment
